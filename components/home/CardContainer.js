@@ -1,9 +1,8 @@
 import styles from './CardContainer.module.scss';
-import { useState } from 'react';
 import CardItem from './CardItem';
 
 export default function MenuContainer({ shops }) {
-  console.log('shops2',shops);
+  // console.log('CardContainer',shops);
   return (
     <div className={styles.homepage}>
       <h1>Shop Page</h1>
