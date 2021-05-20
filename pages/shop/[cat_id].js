@@ -1,5 +1,4 @@
 import CardContainer from '../../components/home/CardContainer'
-import Link from 'next/link';
 import  Layout from '../../components/layout/Layout';
 import { useRouter } from 'next/router';
 
@@ -19,12 +18,12 @@ export default function Nav({shops}) {
   const filterCatId = router.query.cat_id;
   const cat_id = (router.query.cat_id === 'hats' ? 1 : router.query.cat_id === 'jackets' ? 2 : router.query.cat_id === 'sneakers' ? 3 :router.query.cat_id === 'womens' ? 4:5);
 
-  console.log('filterCatId',filterCatId);
+  // console.log('filterCatId',filterCatId);
   // console.log('cat_id',cat_id);
   const objDetail = shops.filter((obj) => obj.cat_id === cat_id);
 
   // console.log('shoooops',shops);
-  console.log('objDetail',objDetail);
+  // console.log('objDetail',objDetail);
 
 
   return (

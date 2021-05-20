@@ -13,7 +13,7 @@ export async function getServerSideProps(){
 }
 
 export default function Home({categories}) {
-  console.log('index',categories);
+  // console.log('index',categories);
   return (
     <Layout>
       <MenuContainer key={categories[0].cid} categories={categories} />
