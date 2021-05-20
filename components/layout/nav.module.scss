@@ -1,0 +1,197 @@
+.navContainer {
+  @media (min-width: 666px) {
+    .nav {
+      position: fixed;
+      width: 100vw;
+      background: #464C44;
+      margin: 0px;
+      // max-width:110%;
+      z-index: 2;
+    }
+    .menu > li > img {
+      width: 80%;
+      height: 80%;
+      transform: skewX(-25deg);
+      padding: 0.7rem 0.5rem !important;
+    }
+  }
+  @media (max-width: 666px) {
+    .nav {
+      position: fixed;
+      width: 100vw;
+      background: #464C44;
+      margin: 0px;
+      // max-width:110%;
+      z-index: 2;
+    }
+    .menu a {
+      display: block;
+      color: rgb(0, 0, 0);
+      text-transform: uppercase;
+      text-decoration: none;
+      // font-family: Arial, Helvetica;
+    }
+    .menu > li > a {
+      transform: skewX(-25deg);
+      padding: 0.5rem 1rem !important;
+    }
+    .menu > li > img {
+      width: 20px;
+      height: 70%;
+      transform: skewX(-25deg);
+      padding: 0.5rem 0.1rem !important;
+    }
+    .submenu {
+      position: absolute;
+      width: 7rem !important;
+      left: 50%;
+      margin-left: -50px !important;
+      transform: skewX(-25deg);
+      transform-origin: left top;
+    }
+    .submenu > li > a {
+      padding: 0.5rem 1rem !important;
+    }
+  }
+
+
+  /* Clearing floats */
+  .cf:before,
+  .cf:after {
+    content: ' ';
+    display: table;
+  }
+
+  .cf:after {
+    clear: both;
+  }
+
+  .cf {
+    *zoom: 1;
+  }
+
+  /* Mini reset, no margins, paddings or bullets */
+  .menu,
+  .submenu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  /* Main level */
+  .menu {
+    margin: 0 auto;
+    //   width: 100vh !important;
+    /* http://www.red-team-design.com/horizontal-centering-using-css-fit-content-value */
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    width: fit-content;
+  }
+
+  .menu > li {
+    background: #464C44;
+    float: left;
+    position: relative;
+    transform: skewX(25deg);
+  }
+
+  .menu a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-decoration: none;
+    // font-family: Arial, Helvetica;
+    font-size: 14px;
+  }
+
+  .menu li:hover {
+    background: #000000;
+  }
+
+  .menu > li > a {
+    transform: skewX(-25deg);
+    padding: 1.2rem 2.5rem;
+  }
+
+  /* Dropdown */
+  .submenu {
+    position: absolute;
+    width: 10rem;
+    left: 50%;
+    margin-left: -80px;
+    transform: skewX(-25deg);
+    transform-origin: left top;
+  }
+
+  .submenu li {
+    background: #464C44;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .submenu > li > a {
+    padding: 1em 2em;
+  }
+
+  .submenu > li::after {
+    content: '';
+    position: absolute;
+    top: -125%;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 50px #ffffff;
+  }
+
+  /* Odd stuff */
+  .submenu > li:nth-child(odd) {
+    transform: skewX(-25deg) translateX(0);
+  }
+
+  .submenu > li:nth-child(odd) > a {
+    transform: skewX(25deg);
+  }
+
+  .submenu > li:nth-child(odd)::after {
+    right: -50%;
+    transform: skewX(-25deg) rotate(3deg);
+  }
+
+  /* Even stuff */
+  .submenu > li:nth-child(even) {
+    transform: skewX(25deg) translateX(0);
+  }
+
+  .submenu > li:nth-child(even) > a {
+    transform: skewX(-25deg);
+  }
+
+  .submenu > li:nth-child(even)::after {
+    left: -50%;
+    transform: skewX(25deg) rotate(3deg);
+  }
+
+  /* Show dropdown */
+  .submenu,
+  .submenu li {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .submenu li {
+    transition: 0.2s ease transform;
+  }
+
+  .menu > li:hover .submenu,
+  .menu > li:hover .submenu li {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu > li:hover .submenu li:nth-child(even) {
+    transform: skewX(25deg) translateX(15px);
+  }
+
+  .menu > li:hover .submenu li:nth-child(odd) {
+    transform: skewX(-25deg) translateX(-15px);
+  }
+}
