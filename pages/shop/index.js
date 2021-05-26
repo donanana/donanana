@@ -1,4 +1,4 @@
-import CardContainer from '../../components/home/CardContainer'
+import CardContainer from '../../components/crown/CardContainer'
 import Link from 'next/link';
 import  Layout from '../../components/layout/Layout';
 
@@ -13,7 +13,7 @@ export async function getServerSideProps(){
   }
 }
 
-export default function Nav({shops}) {
+export default function Shop({shops}) {
   // console.log('shops',shops);
   return (
     <div>

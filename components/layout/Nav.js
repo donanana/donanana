@@ -21,6 +21,9 @@ export default function Nav() {
             <Link href='/'>Home</Link>
           </li>
           <li>
+            <Link href='/overview'>OverView</Link>
+          </li>
+          <li>
             <Link href='/shop'>Shop</Link>
           </li>
           <li>

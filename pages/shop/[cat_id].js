@@ -1,4 +1,4 @@
-import CardContainer from '../../components/home/CardContainer'
+import CardContainer from '../../components/crown/CardContainer'
 import  Layout from '../../components/layout/Layout';
 import { useRouter } from 'next/router';
 
