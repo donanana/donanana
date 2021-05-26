@@ -13,21 +13,21 @@
   }
 }
 
-// .overview{
-//   display: grid;
-//   grid-template-columns: 1fr 1fr;
-//   width: 90%;
-//   overflow: hidden;
-//   h3{
-//       // width: 60%;
-//       margin: 1rem;
-//   }
-//   a{
-//     text-align: right;
-//       padding: 17px;
-//       flex-direction:row-reverse;
-//   }
-// }
+.overview{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  overflow: hidden;
+  h3{
+      // width: 60%;
+      margin: 1rem;
+  }
+  a{
+    text-align: right;
+      padding: 17px;
+      flex-direction:row-reverse;
+  }
+}
 
 @media (max-width: 666px){
   .menuContainer_menu {
