@@ -24,8 +24,11 @@
   }
   a{
     text-align: right;
-      padding: 17px;
-      flex-direction:row-reverse;
+    padding: 17px;
+    flex-direction:row-reverse;
+  }
+  a:hover {
+    color: #a1b4b6;
   }
 }
 
