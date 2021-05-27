@@ -1,4 +1,4 @@
-import styles from './OverView.module.scss';
+import styles from './OverViewContainer.module.scss';
 import CardItem from './CardItem';
 import Link from 'next/link';
 import { Icon, InlineIcon } from '@iconify/react';

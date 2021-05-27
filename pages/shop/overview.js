@@ -1,4 +1,4 @@
-import OverView from '../../components/crown/OverView'
+import OverView from '../../components/crown/OverViewContainer'
 import  Layout from '../../components/layout/Layout';
 import { useRouter } from 'next/router';
 
