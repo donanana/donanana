@@ -3,7 +3,7 @@ import  Layout from '../../components/layout/Layout';
 import { useRouter } from 'next/router';
 
 export async function getServerSideProps(){
-  const response = await fetch('https://dry-wave-60207.herokuapp.com/api/shop');
+  const response = await fetch('https://web-final-110.herokuapp.com/products');
   const shops = await response.json();
   
   return{
@@ -20,7 +20,7 @@ export default function Nav({shops}) {
 
   // console.log('filterCatId',filterCatId);
   // console.log('cat_id',cat_id);
-  const objDetail = shops.filter((obj) => obj.cat_id === cat_id);
+  const objDetail = shops.filter((obj) => obj.category.id === cat_id);
 
   // console.log('shoooops',shops);
   // console.log('objDetail',objDetail);

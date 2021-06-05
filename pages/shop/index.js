@@ -3,7 +3,7 @@ import Link from 'next/link';
 import  Layout from '../../components/layout/Layout';
 
 export async function getServerSideProps(){
-  const response = await fetch('https://dry-wave-60207.herokuapp.com/api/shop');
+  const response = await fetch('https://web-final-110.herokuapp.com/categories');
   const shops = await response.json();
 
   return{
