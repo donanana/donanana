@@ -3,7 +3,7 @@ import  Layout from '../../components/layout/Layout';
 import { useRouter } from 'next/router';
 
 export async function getServerSideProps(){
-  const response = await fetch('https://web-final-110.herokuapp.com/products');
+  const response = await fetch('https://finalbackend-240.herokuapp.com/products');
   const shops = await response.json();
   
   return{
@@ -19,7 +19,7 @@ export default function Nav({shops}) {
   const cat_id = (router.query.cat_id === 'hats' ? 1 : router.query.cat_id === 'jackets' ? 2 : router.query.cat_id === 'sneakers' ? 3 :router.query.cat_id === 'womens' ? 4:5);
 
   // console.log('filterCatId',filterCatId);
-  // console.log('cat_id',cat_id);
+  console.log('cat_id',cat_id);
   const objDetail = shops.filter((obj) => obj.category.id === cat_id);
 
   // console.log('shoooops',shops);

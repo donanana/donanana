@@ -3,7 +3,7 @@ import  Layout from '../../components/layout/Layout';
 import { useRouter } from 'next/router';
 
 export async function getServerSideProps(){
-  const response = await fetch('https://web-final-110.herokuapp.com/products');
+  const response = await fetch('https://finalbackend-240.herokuapp.com/products');
   const shops = await response.json();
   
   return{
