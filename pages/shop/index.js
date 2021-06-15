@@ -14,7 +14,7 @@ export async function getServerSideProps(){
 }
 
 export default function Shop({shops}) {
-  // console.log('shops',shops);
+  console.log('shops',shops);
   return (
     <div>
       <Layout/>
